@@ -1,0 +1,49 @@
+.d-flex{
+    display:flex;
+}
+
+$flex-jc:(start:flex-start,
+    center:center,
+    end:flex-end,
+    between:space-between,
+    around:space-around,
+);
+
+@each $key,
+$value in $flex-jc {
+    .jc-#{$key} {
+        justify-content: $value;
+    }
+}
+
+@each $var in (left, center, right) {
+    .text-#{$var} {
+        text-align: $var !important;
+    }
+}
+
+$font-sizes:(
+    xl:16px,
+    lg:14px,
+    sm:12px,
+    xs:10px
+    
+);
+
+@each $key,$value in $font-sizes {
+    .fs-#{$key}{
+        font-size:$value
+    }
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+    line-height:1.5rem;
+    font-size:14px;
+}
+
+.iconfont{
+    font-size:21px !important;
+    margin-right:7px;
+}
